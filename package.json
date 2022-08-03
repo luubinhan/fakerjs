@@ -1,42 +1,28 @@
 {
-  "_args": [
-    [
-      "github:withshepherd/faker.js#d3ce6f1",
-      "/Users/kiet.phan/Sites/MM/mmgp-frontend"
-    ]
-  ],
-  "_development": true,
-  "_from": "github:withshepherd/faker.js#d3ce6f1",
-  "_id": "faker@github:withshepherd/faker.js#d3ce6f1a2a9359574e7f31f14d4901648047c45a",
-  "_inBundle": false,
-  "_integrity": "",
-  "_location": "/faker",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "git",
-    "raw": "github:withshepherd/faker.js#d3ce6f1",
-    "rawSpec": "github:withshepherd/faker.js#d3ce6f1",
-    "saveSpec": "github:withshepherd/faker.js#d3ce6f1",
-    "fetchSpec": null,
-    "gitCommittish": "d3ce6f1"
-  },
-  "_requiredBy": [
-    "#DEV:/"
-  ],
-  "_resolved": "github:withshepherd/faker.js#d3ce6f1a2a9359574e7f31f14d4901648047c45a",
-  "_spec": "github:withshepherd/faker.js#d3ce6f1",
-  "_where": "/Users/kiet.phan/Sites/MM/mmgp-frontend",
-  "bugs": {
-    "url": "https://github.com/Marak/Faker.js/issues"
-  },
-  "contributors": [
-    {
-      "name": "Marak Squires",
-      "email": "marak.squires@gmail.com"
-    }
-  ],
-  "dependencies": {},
+  "name": "fakerjs",
+  "version": "1.0.0",
   "description": "Generate massive amounts of fake contextual data",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "cd build && ../node_modules/.bin/gulp && cd ../",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "doc": "jsdoc -c conf.json -t ./node_modules/ink-docstrap/template -R README.md lib",
+    "lint": "jshint ./lib --config ./.jshintrc",
+    "test": "mocha test/*.*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luubinhan/fakerjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luubinhan/fakerjs/issues"
+  },
   "devDependencies": {
     "browserify": "5.11.1",
     "coveralls": "^2.13.1",
@@ -57,45 +43,5 @@
     "through2": "2.0.0",
     "vinyl-transform": "0.0.1"
   },
-  "homepage": "https://github.com/Marak/Faker.js#readme",
-  "license": "MIT",
-  "main": "index.js",
-  "name": "faker",
-  "nyc": {
-    "all": false,
-    "include": [
-      "lib/**/*.js",
-      "vendor/*.js"
-    ],
-    "exclude": [
-      "coverage",
-      "locales",
-      "modules",
-      "white",
-      "docs",
-      "docker",
-      "public",
-      "reports",
-      "tests",
-      "node_modules"
-    ],
-    "reporter": [
-      "html",
-      "lcov",
-      "clover"
-    ],
-    "report-dir": "./reports/coverage"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/Marak/Faker.js.git"
-  },
-  "scripts": {
-    "build": "cd build && ../node_modules/.bin/gulp && cd ../",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "doc": "jsdoc -c conf.json -t ./node_modules/ink-docstrap/template -R README.md lib",
-    "lint": "jshint ./lib --config ./.jshintrc",
-    "test": "mocha test/*.*.js"
-  },
-  "version": "4.1.0"
+  "homepage": "https://github.com/luubinhan/fakerjs#readme"
 }
